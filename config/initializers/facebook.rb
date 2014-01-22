@@ -1,0 +1,1 @@
+ Rails.configuration.fb_app = YAML.load(File.read("#{Rails.root}/config/facebook_app.yml"))

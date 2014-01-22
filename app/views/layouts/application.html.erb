@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PageFetcher</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div class="container">
+
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+	  <li class="flash_error">
+	    	<%= content_tag :div, msg, :id => "flash_#{name}" %>
+	  </li>
+  <% end %>
+<% end %>
+
+<%= yield %>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+	<div class="page-fetcher-form">
+		<div class="title">
+			Page fetcher
+		</div>
+
+		<%= form_for @facebook_user do |f| %>
+			<%= f.text_field :identity, :class => "identity_input" %><br/>
+			<div class="info">(example: 188091757763)</div>
+		  <div class="submit">
+		  	<%= f.submit "add" , :class => "btn btn-default btn-lg" %>
+		  </div>
+		  <%= link_to "Refresh access token", "/auth/facebook" %>
+		<% end %>
+	</div>
+	<div class="user-list">
+		<% FacebookUser.all.each do |fb_user| %>
+		<div class="user">
+			<%= image_tag fb_user.image_url, :class => "user_icon"  %>
+			<%= link_to fb_user.name,feeds_facebook_user_path(fb_user.id), :class => "user_name" %>
+		</div>
+		<% end %>
+	</div>

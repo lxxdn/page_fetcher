@@ -1,0 +1,13 @@
+
+	<div class="feed-title">
+		<%= image_tag @feed_owner[:image_url] , class: "feed-owner-icon"%>
+		<p class="feed-owner-name"><%= @feed_owner[:name] %>'s feeds</p>
+	</div>
+	<% @feeds.each do |feed| %>
+		<div class="feed">
+			<%= image_tag feed[:from_image_url], class: "feed-user-icon" %>
+			<p class="feed-user-name"><%= feed[:from_name]%></p>
+			<p class="feed-user-created-at">created at <%= time_ago_in_words(feed[:created_at]) %></p>
+			<p class="feed-message"><%= feed[:message] %></p>
+		</div>
+	<% end %>

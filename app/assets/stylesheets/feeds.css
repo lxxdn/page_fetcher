@@ -1,0 +1,44 @@
+.feed-title{
+	margin-bottom: 5%;
+	margin-top: 20px;
+}
+
+.feed-owner-icon{
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin-right: 10px;
+}
+
+.feed-owner-name{
+	font-size: x-large;
+	margin-left: 10px;
+	line-height: 3;
+}
+
+.feed{
+	margin-bottom: 20px;
+}
+
+.feed-user-icon{
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.feed-user-name{
+	margin-left: 10px;
+	line-height: 3;
+	font-size: large;
+	margin-bottom: -12px;
+}
+
+.feed-message{
+	font-size: initial;
+	color: brown;
+}
+
+.feed-user-created-at{
+	color: #999;
+}
